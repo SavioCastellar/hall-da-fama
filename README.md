@@ -1,5 +1,5 @@
 ﻿# Hall da Fama Olímpico
-Este projeto é uma aplicação de galeria de atletas lendários, focada na exibição de cards com informações visuais e modais interativos para cada atleta. O projeto foi desenvolvido como parte de um concurso de programação básica, com o objetivo de mostrar o uso de tecnologias fundamentais como HTML, CSS e JavaScript, aliado ao suporte de inteligência artificial para auxiliar na criação e otimização do código.
+Este projeto é uma aplicação de galeria de atletas que marcaram seu nome na história das Olimpíadas, focada na exibição de cards com informações visuais e modais interativos para cada atleta. O projeto foi desenvolvido como parte de um concurso de programação básica, com o objetivo de mostrar o uso de tecnologias fundamentais como HTML, CSS e JavaScript, aliado ao suporte de inteligência artificial para auxiliar na criação e otimização do código.
 
 ![Preview da aplicação](image.png)
 
