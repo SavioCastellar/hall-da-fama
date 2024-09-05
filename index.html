@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Hall da Fama</title>
+</head>
+
+<body>
+    <div class="background">
+        <header>
+            <div class="block-titulo">
+                <div class="container-titulo">
+                    <figure>
+                        <img class="img-titulo" src="imagens/estrela.png" alt="Ícone de estrela">
+                        <figcaption>Ícone criado por Muhammad_Usman - https://www.flaticon.com/free-icons/music-and-multimedia</figcaption>
+                    </figure>
+                    <h1 class="titulo">Hall da Fama</h1>
+                </div>
+                <div class="curva-titulo-tr"></div>
+                <div class="curva-titulo-br"></div>
+                <div class="curva-titulo-bl"></div>
+            </div>
+        </header>
+        <main>
+            <label for="busca" class="busca">
+                <input type="text" id="busca" placeholder="Pesquisar por nome...">
+                <img class="img-busca" src="imagens/search.png" alt="Ícone de busca">
+            </label>
+            <div id="container-atletas"></div>
+            <div class="paginacao">
+                <img src="imagens/anterior.png" alt="Anterior" id="btn-anterior" class="navegacao">
+                <div id="paginas"></div>
+                <img src="imagens/proxima.png" alt="Próxima" id="btn-proximo" class="navegacao">
+            </div>
+            <div class="redirecionamento">
+                <img class="img-olimpiadas" src="imagens/olympics.png" alt="Olimpíadas">
+                <div>
+                    <h3 class="mais-info">Quer saber mais?</h3>
+                    <p>Visite o site oficial e conheça a história e consquistas de cada um dos atletas</p>
+                </div>
+                <a href="https://olympics.com/en/athletes/" class="btn-olimpiadas" target="_blank">Olimpíadas</a>
+                <div class="curva-olimpiadas-tl"></div>
+                <div class="curva-olimpiadas-tr"></div>
+                <div class="curva-olimpiadas-br"></div>
+            </div>
+            <div id="modal" class="modal">
+                <div class="container-modal"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="media">
+                <img class="media-icon" src="imagens/instagram.svg" alt="instagram">
+                <a href="https://www.instagram.com/saviocastellar/">@saviocastellar</a>
+            </div>
+            <div class="media">
+                <img class="media-icon" src="imagens/github.svg" alt="github">
+                <a href="https://github.com/SavioCastellar">SavioCastellar</a>
+            </div>
+            <div class="media">
+                <img class="media-icon" src="imagens/linkedin.svg" alt="linkedin">
+                <a href="linkedin.com/in/saviocastellar">Sávio Castellar</a>
+            </div>
+            <div class="curva-footer-bl"></div>
+            <div class="curva-footer-tl"></div>
+            <div class="curva-footer-tr"></div>
+        </footer>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
