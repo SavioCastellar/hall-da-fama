@@ -32,14 +32,98 @@ Ao clicar em um card de atleta, é exibido um modal dinâmico que contém mais d
 
     ![](imagens/amostras/func4.gif)
 
+## :bulb: Técnicas utilizadas com ajuda do Google Gemini
+### Bordas arredondadas
+Para a estruturação do background foi utilizada uma técnica de criar elementos na borda e usar suas sombras para fazer o arredondamento.
+Implementação sugerida pelo Gemini:
+
+- `Passo 1`: Criar um background com bordas arredondadas e margens.
+  
+ <img src="https://github.com/user-attachments/assets/51ec2da3-f34b-4226-8ff8-ef1ee0339c8c" alt="background 1" width="300px">
+ 
+``` html
+<div class="background"></div>
+```
+``` css
+.background{
+    background-color: #0B090A;
+    border-radius: 30px;
+    border: none;
+    margin: 20px;
+    height: calc(100vh - 40px);
+}
+```
+
+- `Passo 2`: Adicionar um bloco com posição fixa.
+  
+ <img src="https://github.com/user-attachments/assets/df414eac-ec97-4969-969f-4f23fe7e2cd1" alt="background 2" width="300px">
+ 
+``` html
+<div class="block-titulo"></div>
+```
+``` css
+.block-titulo{
+    position: absolute;
+    background-color: #F44C71; /* Cor utilizada apenas para demonstração. A cor real deve ser a mesma que a do background (#DDDDDD) */
+    height: 150px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+```
+
+- `Passo 3`: Adicionar blocos em todos os cantos a serem arredondados. (*Cores demonstrativas)
+
+<img src="https://github.com/user-attachments/assets/e0b8a190-8ecf-4934-90c3-37a0aaf39471" alt="background 3" width="300px">
+
+``` html
+<div class="curva-titulo tr"></div>
+<div class="curva-titulo br"></div>
+<div class="curva-titulo bl"></div>
+```
+``` css
+.curva-titulo{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: none;
+}
+
+.curva-titulo.tr{
+    right: -60px;
+    top: 0;
+    border-radius: 50% 0 0 0; /* #DDDDDD */
+    box-shadow: yellow -12px -12px;
+    background-color: #a3a; /* transparent */
+}
+
+.curva-titulo.br{
+    right: 0px;
+    bottom: 0;
+    border-radius: 0 0 50% 0; /* #0B090A */
+    box-shadow: yellow 12px 12px; 
+    background-color: #a3a; /* transparent */
+}
+
+.curva-titulo.bl{
+    left: 0px;
+    bottom: -60px;
+    border-radius: 50% 0 0 0; /* #DDDDDD */
+    box-shadow: yellow -12px -12px;
+    background-color: #a3a; /* #0B090A */
+}
+```
+
+- `Resultado final`:
+  
+Após colocar as cores de acordo com o seu foreground e background, o resultado será o seguinte:
+
+<img src="https://github.com/user-attachments/assets/117b2842-1f34-4142-9dbf-fc5abb170bf6" alt="background 3" width="300px">
 
 ## ✔️ Tecnologias utilizadas
 - `HTML`: Para a estruturação dos elementos da página.
 - `CSS`: Para o design, incluindo responsividade e estilos personalizados dos cards e modais.
 - `JavaScript`: Para a criação da interatividade, incluindo a abertura do modal ao clicar no card e a funcionalidade de pesquisa e paginação.
-
-## :bulb: Técnicas utilizadas com ajuda do Google Gemini
-
 
 ## :file_folder: Estrutura de Pastas
 O projeto está organizado da seguinte forma:
