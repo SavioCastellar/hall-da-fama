@@ -81,9 +81,9 @@ function renderizarAtletas(atletasAtuais) {
             <img class="img-atleta" src=${atleta.imagem} alt="${atleta.nome}">
             <div class="detalhes-atleta">
             <div class="wrap-modalidade">
-            <img class="img-modalidade" src="imagens/modalidades/${atleta.modalidade.toLowerCase()}.png" alt="${atleta.modalidade}">
+            <img class="img-modalidade" src="imagens/${atleta.modalidade.toLowerCase()}.png" alt="${atleta.modalidade}">
             </div>
-            <img class="img-pais" src="imagens/bandeiras/${atleta.nacionalidade.toLowerCase()}.png" alt="${atleta.nacionalidade}">
+            <img class="img-pais" src="imagens/${atleta.nacionalidade.toLowerCase()}.png" alt="${atleta.nacionalidade}">
             </div>
             <h3 class="nome-atleta">${atleta.nome}</h3>
             <div class="pregos">
@@ -137,7 +137,7 @@ function abrirModal(atleta) {
         <div class="header-modal">
             <h1 class="nome-atleta-modal">${atleta.nome}</h1>
             <div class="wrap-modalidade-modal">
-                <img class="img-modalidade-modal" src="imagens/modalidades/${atleta.modalidade.toLowerCase()}.png" alt="${atleta.modalidade}">
+                <img class="img-modalidade-modal" src="imagens/${atleta.modalidade.toLowerCase()}.png" alt="${atleta.modalidade}">
             </div>
         </div>
         <div class="body-modal">
@@ -162,7 +162,7 @@ function abrirModal(atleta) {
             </div>
         </div>
         <div class="footer-modal">
-            <img class="imagem-bandeira" src="imagens/bandeiras/${atleta.nacionalidade.toLowerCase()}.png" alt="${atleta.nacionalidade}">
+            <img class="imagem-bandeira" src="imagens/${atleta.nacionalidade.toLowerCase()}.png" alt="${atleta.nacionalidade}">
         </div>
     `;
 
