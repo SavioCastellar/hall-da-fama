@@ -39,33 +39,31 @@ while (contagem <= totalPaginas) {
 let atletasAtuais = atletas.slice((paginaAtual - 1) * atletasPorPagina, paginaAtual * atletasPorPagina);
 
 // Navegar entre páginas
-function navegar(pagina) {
+function navegar(pagina, atletas) {
     // Remover a classe 'selecionada' da página atual
     document.querySelector('.pagina.selecionada')?.classList.remove('selecionada');
 
     // Atualizar a página atual
     paginaAtual = pagina;
-    console.log('paginaAtual', paginaAtual);
 
     // Adicionar a classe 'selecionada' à nova página
     document.querySelector(`.pagina:nth-child(${paginaAtual})`)?.classList.add('selecionada');
 
     // Atualizar a lista de atletas exibida
     atletasAtuais = atletas.slice((paginaAtual - 1) * atletasPorPagina, paginaAtual * atletasPorPagina);
-    console.log('atletasAtuais', atletasAtuais);
     renderizarAtletas(atletasAtuais);
 }
 
 // Event listeners para os botões de navegação
 botaoAnterior.addEventListener('click', () => {
     if (paginaAtual > 1) {
-        navegar(paginaAtual - 1);
+        navegar(paginaAtual - 1, atletas);
     }
 });
 
 botaoProximo.addEventListener('click', () => {
     if (paginaAtual < totalPaginas) {
-        navegar(paginaAtual + 1);
+        navegar(paginaAtual + 1, atletas);
     }
 });
 
@@ -74,7 +72,6 @@ function renderizarAtletas(atletasAtuais) {
     containerAtletas.innerHTML = '';
     atletasAtuais.forEach((atleta) => {
         let card = document.createElement('div');
-        card.classList.add('card'); // Adiciona a classe "card" ao elemento div
 
         card.innerHTML = `<div class="card" id="btnAbrirModal">
             <div class="pregos">
@@ -111,17 +108,17 @@ if (paginaAtual === 1) {
 input.addEventListener('input', function() {
     let value = this.value.toLowerCase();
 
-    let cards = document.querySelectorAll('.card');
-
-    cards.forEach((card) => {
-        let nome = card.querySelector('.nome-atleta').textContent.toLowerCase();
-
-        if (nome.includes(value)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+    let atletasFiltrados = atletas.filter((atleta) => {
+        return atleta.nome.toLowerCase().includes(value);
     });
+
+    totalPaginas = Math.ceil(atletasFiltrados.length / atletasPorPagina);
+    paginaAtual = 1;
+    contagem = 1;
+
+    atletasFiltrados.slice((paginaAtual - 1) * atletasPorPagina, paginaAtual * atletasPorPagina);
+
+    navegar(paginaAtual, atletasFiltrados);
 });
 
 // Abrir e fechar modal

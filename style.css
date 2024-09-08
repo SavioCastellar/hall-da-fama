@@ -10,7 +10,7 @@ body{
 }
 
 p{
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -25,8 +25,8 @@ p{
 .block-titulo{
     position: absolute;
     background-color: #DDDDDD;
-    height: 150px;
-    width: 800px;
+    height: 120px;
+    width: 600px;
     display: flex;
     justify-content: center;
 }
@@ -77,20 +77,20 @@ p{
     align-items: center;
     margin: 10px 20px 20px 70px;
     width: 100%;
-    border-radius: 20px 20px 20px 80px;
+    border-radius: 14px 14px 14px 80px;
     border: none;
 }
 
 .img-titulo{
     position: absolute;
-    left: 40px;
-    top: -10px;
-    height: 160px;
-    width: 160px;
+    left: 30px;
+    top: -14px;
+    height: 8rem;
+    width: 8rem;
 }
 
 .titulo{
-    font-size: 48px;
+    font-size: 32px;
     font-weight: lighter;
     margin-right: 40px;
 }
@@ -101,17 +101,17 @@ figcaption{
 
 .busca{
     position: absolute;
-    right: 80px;
-    top: 70px;
+    right: 60px;
+    top: 60px;
 }
 
 input{
-    width: 500px;
-    height: 70px;
+    width: 400px;
+    height: 56px;
     border-radius: 50px;
     border: none;
-    padding-left: 40px; /* Ajuste para acomodar a imagem */
-    font-size: 26px;
+    padding-left: 40px;
+    font-size: 24px;
     background-color: #DDDDDD;
 }
 
@@ -131,41 +131,43 @@ input::placeholder{
     display: grid;
     position: absolute;
     grid-template-columns: auto auto auto auto auto;
-    left: 480px;
-    top: 200px;
-    gap: 28px;
+    left: 400px;
+    top: 160px;
+    gap: 20px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    width: 240px;
+    width: auto;
     border-radius: 10px;
-    border: 2px solid #DDDDDD;
+    border: 3px solid #DDDDDD;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
     backdrop-filter: blur(20px);
     cursor: pointer;
 }
 
 .img-atleta{
-    height: 192px;
-    width: 192px;
+    height: 9rem;
+    width: 9rem;
     border-radius: 100px;
     object-fit: cover;
-    margin: 0 auto;
+    margin: 0 28px;
+
 }
 
 .detalhes-atleta{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: -30px 28px 0 28px;
+    gap: 60px;
 }
 
 .wrap-modalidade{
     background-color: #111111;
-    width: 42px;
+    width: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,18 +175,18 @@ input::placeholder{
 }
 
 .img-modalidade{
-    height: 28px;
+    height: 24px;
     border-radius: 20px;
     object-fit: cover;
 }
 
 .img-pais{
-    width: 42px;
+    width: 32px;
     object-fit: cover;
 }
 
 .nome-atleta{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin: 0 auto;
     margin-top: 10px;
@@ -218,61 +220,56 @@ input::placeholder{
 .redirecionamento{
     position: absolute;
     bottom: 20px;
-    width: 400px;
-    height: 360px;
+    width: 340px;
+    height: 300px;
     background-color: #DDDDDD;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    /* padding: 14px 0 0 0; */
+    padding: 0 10px;
 }
 
-.curva-olimpiadas-tr{
+.curva-olimpiadas{
     position: absolute;
-    left: 0;
-    top: -60px;
     width: 60px;
     height: 60px;
+    border: none;
+}
+
+.curva-olimpiadas.tr{
+    left: 0;
+    top: -60px;
     background-color: transparent;
     border-radius: 0 0 0 50%;
-    border: none;
     box-shadow: #DDDDDD -12px 12px;
 }
 
-.curva-olimpiadas-tl{
-    position: absolute;
+.curva-olimpiadas.tl{
     right: 0;
     top: 0;
-    width: 60px;
-    height: 60px;
     background-color: transparent;
     border-radius: 0 50% 0 0;
-    border: none;
     box-shadow: #0B090A 12px -12px;
 }
 
-.curva-olimpiadas-br{
-    position: absolute;
+.curva-olimpiadas.br{
     right: -60px;
     bottom: 0;
-    width: 60px;
-    height: 60px;
     background-color: transparent;
     border-radius: 0 0 0 50%;
-    border: none;
     box-shadow: #DDDDDD -12px 12px;
 }
 
 .img-olimpiadas{
-    height: 96px;
-    width: 96px;
+    height: 4.25rem;
+    width: 4.25rem;
     margin-top: 40px;
 }
 
 .mais-info{
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 400;
     margin: 0 0 10px 0;
 }
@@ -294,7 +291,7 @@ input::placeholder{
 .paginacao{
     position: absolute;
     bottom: 20px;
-    left: 740px;
+    left: 580px;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -314,9 +311,9 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
-    width:44px;
-    height:44px;
-    font-size: 28px;
+    width:36px;
+    height:36px;
+    font-size: 20px;
     font-weight: 500;
     color: #DDDDDD;
     text-align: center;
@@ -325,15 +322,15 @@ input::placeholder{
 }
 
 .pagina.selecionada{
-    width:44px;
-    font-size: 32px;
+    width:36px;
+    font-size: 24px;
     font-weight: 500;
     color: #F44C71;
     text-align: center;
 }
 
 .navegacao{
-    height: 24px;
+    height: 18px;
     cursor: pointer;
 }
 
@@ -341,14 +338,14 @@ footer{
     position: absolute;
     bottom: 20px;
     right: 20px;
-    height: 80px;
+    height: 60px;
     background-color: #DDDDDD;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    gap: 40px;
+    padding: 0 20px;
+    gap: 30px;
 }
 
 .media{
@@ -362,8 +359,8 @@ footer{
 }
 
 .media-icon{
-    height: 28px;
-    width: 28px;
+    height: 20px;
+    width: 20px;
     background-color: #0B090A;
     border-radius: 6px;
     padding: 4px;
@@ -411,15 +408,15 @@ a{
 }
 
 .modal {
-    display: none; /* Inicialmente oculto */
-    position: fixed; /* Fixo na tela */
-    z-index: 1; /* Sobrepor outros elementos */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Permite rolagem se o conteúdo for muito grande */
-    background-color: rgba(0,0,0,0.4); /* Fundo escurecido */
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
     justify-content: center;
     align-items: center;
 }
