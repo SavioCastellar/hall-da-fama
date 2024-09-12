@@ -32,7 +32,7 @@ Ao clicar em um card de atleta, é exibido um modal dinâmico que contém mais d
 
     ![](imagens/amostras/func4.gif)
 
-## :bulb: Técnicas utilizadas com ajuda do Google Gemini
+## :bulb: Técnicas utilizadas
 ### Bordas arredondadas
 Para a estruturação do background foi utilizada uma técnica de criar elementos na borda e usar suas sombras para fazer o arredondamento.
 Implementação sugerida pelo Gemini:
